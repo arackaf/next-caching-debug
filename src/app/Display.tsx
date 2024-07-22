@@ -9,7 +9,7 @@ export const Display: FC<{ data: any }> = ({ data }) => {
 
   function reloadData() {
     revalidate();
-    router.refresh();
+    //router.refresh();
   }
 
   console.log("A", data);
