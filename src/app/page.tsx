@@ -1,7 +1,14 @@
-export default function Home() {
+import { Display } from "./Display";
+import { getData } from "./getData";
+
+export default async function Home() {
+  const data = await getData();
+
   return (
     <main>
-      <h1>Hello World</h1>
+      <Display data={data} />
     </main>
   );
 }
+
+export const revalidate = 0;
